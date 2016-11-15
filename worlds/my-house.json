@@ -1,0 +1,20 @@
+{
+  "agents": [
+    {
+      "id": "scott",
+      "name": "Scott Grant"
+    }
+  ],
+  "locations": [
+    {
+      "id": "office",
+      "name": "Scott's Office"
+    }
+  ],
+  "objects": [
+    {
+      "id": "scott-computer",
+      "name": "Scott's Computer"
+    }
+  ]
+}
