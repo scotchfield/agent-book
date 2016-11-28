@@ -7,14 +7,24 @@
   ],
   "locations": [
     {
-      "id": "office",
-      "name": "Scott's Office"
-    }
-  ],
-  "objects": [
+      "id": "the office",
+      "name": "Scott's Office",
+      "movement": {
+        "south": "the basement"
+      },
+      "objects": [
+        {
+          "id": "scott-computer",
+          "name": "Scott's Computer"
+        }
+      ]
+    },
     {
-      "id": "scott-computer",
-      "name": "Scott's Computer"
+      "id": "the basement",
+      "name": "Scott's Basement",
+      "movement": {
+        "north": "the office"
+      }
     }
   ]
 }
