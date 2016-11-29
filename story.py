@@ -72,7 +72,10 @@ if VERBOSE:
     print( world )
 
 agent = random.choice( world['agents'] )
-location = random.choice( world['locations'] )
+if 'location' in agent:
+    location = getKey( 'id', agent['location'], world['locations'] )
+else:
+    location = random.choice( world['locations'] )
 
 print getPhrase( phrases, 'introduction', { 'name': agent['name'] } )
 

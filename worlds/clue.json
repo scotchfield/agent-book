@@ -3,6 +3,7 @@
     {
       "id": "scarlet",
       "name": "Ms. Scarlet",
+      "location": "the study",
       "adjectives": [
         "sultry",
         "beautiful"
@@ -11,6 +12,7 @@
     {
       "id": "mustard",
       "name": "Col. Mustard",
+      "location": "the billiard room",
       "adjectives": [
         "militant",
         "athletic"
@@ -19,6 +21,7 @@
     {
       "id": "white",
       "name": "Mrs. White",
+      "location": "the ballroom",
       "adjectives": [
         "intrusive",
         "kindly"
@@ -27,6 +30,7 @@
     {
       "id": "green",
       "name": "Rev. Green",
+      "location": "the lounge",
       "adjectives": [
         "conniving",
         "religious"
@@ -35,6 +39,7 @@
     {
       "id": "peacock",
       "name": "Mrs. Peacock",
+      "location": "the dining room",
       "adjectives": [
         "sinister",
         "political"
@@ -43,6 +48,7 @@
     {
       "id": "plum",
       "name": "Prof. Plum",
+      "location": "the kitchen",
       "adjectives": [
         "uptight",
         "intelligent"
