@@ -1,14 +1,18 @@
 {
   "introduction": [
-    "My name is {name}. This is my story."
+    "My name is {name}. This is my story.",
+    "Call me {name}."
   ],
   "in-room": [
-    "I'm standing in {room}."
+    "I'm standing in {room}.",
+    "I feel like I've been here before. This is {room}."
   ],
   "object-see": [
-    "As I look around, I see {thing} in the room with me."
+    "As I look around, I see {thing} in the room with me.",
+    "I see {thing} is here with me."
   ],
   "movement": [
-    "I decide to leave, and go {direction}, taking me to {location}."
+    "I decide to leave, and go {direction}, taking me to {location}.",
+    "Eventually it's time for me to go, and I leave toward {location}."
   ]
 }
