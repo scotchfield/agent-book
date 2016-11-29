@@ -22,20 +22,31 @@ def getKey( key, value, obj ):
 
     return None
 
-def updateStory( world, agent, location ):
+def getPhrase( phrases, key, variables ):
+    phrase = random.choice( phrases[key] )
+
+    for variable in variables:
+        search = '{' + variable + '}'
+        while phrase.find( search ) > -1:
+            phrase = phrase.replace( search, variables[variable] )
+
+    return phrase
+
+def updateStory( world, phrases, agent, location ):
     output = []
 
-    output.append( 'I\'m standing in ' + location['name'] + '.' )
+    output.append( getPhrase( phrases, 'in-room', { 'room': location['name'] } ) )
+
     if 'objects' in location:
         thing = random.choice( location['objects'] )
-        output.append( 'As I look around, I see ' + thing['name'] + ' in the room with me.' )
+        output.append( getPhrase( phrases, 'object-see', { 'thing': thing['name'] } ) )
 
     if 'movement' in location:
         move = random.choice( location['movement'].keys() )
         new_location = getKey( 'id', location['movement'][move], world['locations'] )
-        output.append( 'I decide to leave, and go ' + move + ', taking me to ' + location['movement'][move] + '.' )
+        output.append( getPhrase( phrases, 'movement', { 'direction': move, 'location': location['movement'][move] } ) )
 
-    print '. '.join( output )
+    print ' '.join( output )
 
     return new_location
 
@@ -43,9 +54,19 @@ def updateStory( world, agent, location ):
 try:
     input_filename = sys.argv[1]
 except IndexError:
-    dead( 'Please pass the input world filename as an argument. For example,\n> python story.py worlds/my-house.json' )
+    dead( 'Please pass the input world filename as the first argument. For example,\n> python story.py worlds/my-house.json phrases/english.json' )
 input_file = open( input_filename, 'r' )
 world = json.load( input_file )
+input_file.close()
+
+try:
+    input_filename = sys.argv[2]
+except IndexError:
+    dead( 'Please pass the phrase filename as the second argument. For example,\n> python story.py worlds/my-house.json phrases/english.json' )
+input_file = open( input_filename, 'r' )
+phrases = json.load( input_file )
+input_file.close()
+
 
 if VERBOSE:
     print( world )
@@ -53,7 +74,7 @@ if VERBOSE:
 agent = random.choice( world['agents'] )
 location = random.choice( world['locations'] )
 
-print 'My name is ' + agent['name'] + '. This is my story.'
+print getPhrase( phrases, 'introduction', { 'name': agent['name'] } )
 
 for i in range( 2 ):
-    location = updateStory( world, agent, location )
+    location = updateStory( world, phrases, agent, location )
