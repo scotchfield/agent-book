@@ -7,6 +7,9 @@
     "I'm standing in {room}.",
     "I feel like I've been here before. This is {room}."
   ],
+  "agent-see": [
+    "{agent} is here with me, looking rather {adjective}."
+  ],
   "object-see": [
     "As I look around, I see {thing} in the room with me.",
     "I see {thing} is here with me."

@@ -41,6 +41,10 @@ def updateStory( world, phrases, agent, location ):
         thing = random.choice( location['objects'] )
         output.append( getPhrase( phrases, 'object-see', { 'thing': thing['name'] } ) )
 
+    for agent in world['agents']:
+        if 'location' in agent and agent['location'] == location['id']:
+            output.append( getPhrase( phrases, 'agent-see', { 'agent': agent['name'], 'adjective': random.choice( agent['adjectives'] ) } ) )
+
     if 'movement' in location:
         move = random.choice( location['movement'].keys() )
         new_location = getKey( 'id', location['movement'][move], world['locations'] )
