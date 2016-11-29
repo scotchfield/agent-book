@@ -5,6 +5,7 @@
   ],
   "in-room": [
     "I'm standing in {room}.",
+    "I stand in {room}.",
     "I feel like I've been here before. This is {room}."
   ],
   "agent-see": [
@@ -20,7 +21,14 @@
   ],
   "flavour": [
     "The air is thick and oppressive. I hold my head up high, despite the warning signs.",
-    "The room looked different than I remembered. Somehow, it seemed more {adjective}."
+    "The room looks different than I remember. Somehow, it seems more {adjective}.",
+    "I start to feel {adjective}.",
+    "A sudden noise from one of the nearby rooms surprises me, and I suddenly feel myself feeling quite {adjective}.",
+    "I stand, in silence.",
+    "After thinking about my surroundings, I begin to feel {adjective}.",
+    "This reminds me of a statement I once heard, and I ponder it.",
+    "I look around, suddenly {adjective}.",
+    "The air smells {adjective}, with hints of {adjective-2}."
   ],
   "adjectives": [
     "Aristotelian",

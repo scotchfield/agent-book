@@ -1,9 +1,13 @@
 import json
 import random
+import re
 import sys
 
 VERBOSE = False
 
+
+def wordCount( st ):
+    return len( re.findall( r'\b\w+\b', st ) )
 
 def dead( st, line=False ):
     line_st = ''
@@ -51,7 +55,7 @@ def updateStory( world, phrases, agent, location ):
         output.append( getPhrase( phrases, 'movement', { 'direction': move, 'location': location['movement'][move] } ) )
 
     for i in range( random.randint( 0, 6 ) ):
-        flavour = getPhrase( phrases, 'flavour', { 'adjective': random.choice( phrases['adjectives'] ) } )
+        flavour = getPhrase( phrases, 'flavour', { 'adjective': random.choice( phrases['adjectives'] ), 'adjective-2': random.choice( phrases['adjectives'] ) } )
         output.insert( random.randint( 0, len( output ) ), flavour )
 
     story = ' '.join( output )
@@ -88,7 +92,7 @@ else:
 story = getPhrase( phrases, 'introduction', { 'name': agent['name'] } )
 story += "\n\n"
 
-for i in range( 2 ):
+while wordCount( story ) < 55000:
     new_story, location = updateStory( world, phrases, agent, location )
     story += new_story + "\n\n"
 
