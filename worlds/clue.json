@@ -1,0 +1,229 @@
+{
+  "agents": [
+    {
+      "id": "scarlet",
+      "name": "Ms. Scarlet",
+      "adjectives": [
+        "sultry",
+        "beautiful"
+      ]
+    },
+    {
+      "id": "mustard",
+      "name": "Col. Mustard",
+      "adjectives": [
+        "militant",
+        "athletic"
+      ]
+    },
+    {
+      "id": "white",
+      "name": "Mrs. White",
+      "adjectives": [
+        "intrusive",
+        "kindly"
+      ]
+    },
+    {
+      "id": "green",
+      "name": "Rev. Green",
+      "adjectives": [
+        "conniving",
+        "religious"
+      ]
+    },
+    {
+      "id": "peacock",
+      "name": "Mrs. Peacock",
+      "adjectives": [
+        "sinister",
+        "political"
+      ]
+    },
+    {
+      "id": "plum",
+      "name": "Prof. Plum",
+      "adjectives": [
+        "uptight",
+        "intelligent"
+      ]
+    }
+  ],
+  "locations": [
+    {
+      "id": "the kitchen",
+      "name": "The Kitchen",
+      "movement": {
+        "through the secret passage": "the study",
+        "north": "the dining room",
+        "west": "the ballroom"
+      },
+      "objects": [
+        {
+          "id": "revolver",
+          "name": "the revolver",
+          "adjectives": [
+            "loaded",
+            "unused",
+            "deadly"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the ballroom",
+      "name": "The Ballroom",
+      "movement": {
+        "east": "the kitchen",
+        "west": "the conservatory"
+      },
+      "objects": [
+        {
+          "id": "poison",
+          "name": "the poison",
+          "adjectives": [
+            "viscous",
+            "greenish",
+            "innocuous"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the conservatory",
+      "name": "The Conservatory",
+      "movement": {
+        "through the secret passage": "the lounge",
+        "north": "the billiard room",
+        "east": "the ballroom"
+      },
+      "objects": [
+        {
+          "id": "knife",
+          "name": "the knife",
+          "adjectives": [
+            "sharp",
+            "shiny",
+            "brutal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the billiard room",
+      "name": "The Billiard Room",
+      "movement": {
+        "north": "the library",
+        "south": "the conservatory"
+      },
+      "objects": [
+        {
+          "id": "lead pipe",
+          "name": "the lead pipe",
+          "adjectives": [
+            "dirty",
+            "heavy",
+            "awful"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the library",
+      "name": "The Library",
+      "movement": {
+        "north": "the study",
+        "south": "the billiard room"
+      },
+      "objects": [
+        {
+          "id": "wrench",
+          "name": "the wrench",
+          "adjectives": [
+            "slimy",
+            "shiny",
+            "heavy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the study",
+      "name": "The Study",
+      "movement": {
+        "through the secret passage": "the kitchen",
+        "south": "the library",
+        "east": "the hall"
+      },
+      "objects": [
+        {
+          "id": "rope",
+          "name": "the rope",
+          "adjectives": [
+            "long",
+            "frayed",
+            "scorched"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the hall",
+      "name": "The Hall",
+      "movement": {
+        "west": "the study",
+        "east": "the lounge"
+      },
+      "objects": [
+        {
+          "id": "horseshoe",
+          "name": "the horseshoe",
+          "adjectives": [
+            "metallic",
+            "curved",
+            "greasy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the lounge",
+      "name": "The Lounge",
+      "movement": {
+        "through the secret passage": "the conservatory",
+        "west": "the hall",
+        "south": "the dining room"
+      },
+      "objects": [
+        {
+          "id": "gloves",
+          "name": "the gloves",
+          "adjectives": [
+            "dirty",
+            "thick",
+            "sinister"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the dining room",
+      "name": "The Dining Room",
+      "movement": {
+        "north": "the lounge",
+        "south": "the kitchen"
+      },
+      "objects": [
+        {
+          "id": "candlestick",
+          "name": "the candlestick",
+          "adjectives": [
+            "bronze",
+            "heavy",
+            "thick"
+          ]
+        }
+      ]
+    }
+  ]
+}

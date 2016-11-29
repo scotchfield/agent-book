@@ -19,7 +19,13 @@
       "objects": [
         {
           "id": "scott-computer",
-          "name": "Scott's Computer"
+          "name": "Scott's Computer",
+          "adjectives": [
+            "heavy",
+            "shiny",
+            "black",
+            "bright"
+          ]
         }
       ]
     },
