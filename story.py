@@ -54,9 +54,9 @@ def updateStory( world, phrases, agent, location ):
         flavour = getPhrase( phrases, 'flavour', { 'adjective': random.choice( phrases['adjectives'] ) } )
         output.insert( random.randint( 0, len( output ) ), flavour )
 
-    print ' '.join( output )
+    story = ' '.join( output )
 
-    return new_location
+    return story, new_location
 
 
 try:
@@ -85,7 +85,11 @@ if 'location' in agent:
 else:
     location = random.choice( world['locations'] )
 
-print getPhrase( phrases, 'introduction', { 'name': agent['name'] } )
+story = getPhrase( phrases, 'introduction', { 'name': agent['name'] } )
+story += "\n\n"
 
 for i in range( 2 ):
-    location = updateStory( world, phrases, agent, location )
+    new_story, location = updateStory( world, phrases, agent, location )
+    story += new_story + "\n\n"
+
+print story
