@@ -50,6 +50,10 @@ def updateStory( world, phrases, agent, location ):
         new_location = getKey( 'id', location['movement'][move], world['locations'] )
         output.append( getPhrase( phrases, 'movement', { 'direction': move, 'location': location['movement'][move] } ) )
 
+    for i in range( random.randint( 0, 6 ) ):
+        flavour = getPhrase( phrases, 'flavour', { 'adjective': random.choice( phrases['adjectives'] ) } )
+        output.insert( random.randint( 0, len( output ) ), flavour )
+
     print ' '.join( output )
 
     return new_location
